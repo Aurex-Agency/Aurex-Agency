@@ -36,7 +36,7 @@ export function Pipeline() {
         <Frame>
           <motion.div style={{ opacity: intro }}>
             <Eyebrow className="mb-8">Chapter 07</Eyebrow>
-            <Display className="max-w-3xl">{pipeline.headline}</Display>
+            <Display size="sentence" className="max-w-3xl">{pipeline.headline}</Display>
             <p className="mt-5 max-w-lg text-pretty text-lg text-linen/65">{pipeline.sub}</p>
           </motion.div>
 
@@ -46,7 +46,16 @@ export function Pipeline() {
               <p className="font-mono text-[10px] tracking-[0.26em] text-ash uppercase">
                 Conversion
               </p>
-              <p className="tabular mt-1 text-[clamp(3rem,8vw,6rem)] leading-none font-bold text-signal">
+              {/* The last stage is a word, not a percentage. Rendering it at
+                  the numeric scale looks like a broken figure, so the type
+                  steps down when the value stops being a number. */}
+              <p
+                className={`mt-1 leading-none font-bold text-signal ${
+                  stages[step].rate.endsWith("%")
+                    ? "tabular text-[clamp(3rem,8vw,6rem)]"
+                    : "text-[clamp(2rem,4.6vw,3.5rem)] tracking-[-0.02em]"
+                }`}
+              >
                 {stages[step].rate}
               </p>
             </div>

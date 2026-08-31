@@ -18,7 +18,7 @@ export function About() {
         <div className="grid gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,22rem)] lg:gap-20">
           <div className="max-w-2xl">
             <Eyebrow className="mb-8">Chapter 13</Eyebrow>
-            <Display>{about.headline}</Display>
+            <Display size="sentence">{about.headline}</Display>
 
             <div className="mt-9 space-y-5">
               {about.body.map((para) => (
