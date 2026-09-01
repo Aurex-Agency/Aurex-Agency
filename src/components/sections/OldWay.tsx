@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useTransform, type MotionValue } from "motion/react";
 import { Scene, Frame } from "@/components/ui/Scene";
 import { Display } from "@/components/ui/Type";
+import { Mark } from "@/components/ui/Wordmark";
 import { useSceneProgress } from "@/lib/motion";
 import { pointField } from "@/lib/field";
 import { oldWay } from "@/content/site";
@@ -36,9 +37,12 @@ export function OldWay() {
 
       <div className="pointer-events-none absolute inset-0 grid place-items-center">
         {/* Everything converges into the mark. */}
-        <motion.div style={{ opacity: markOpacity, scale: markScale }} className="text-center">
-          <span className="mx-auto mb-5 block size-2.5 rounded-full bg-signal shadow-[0_0_20px_var(--color-signal)]" />
-          <span className="text-[clamp(2.5rem,9vw,7rem)] leading-none font-bold tracking-[0.16em] text-bone uppercase [font-stretch:88%]">
+        <motion.div
+          style={{ opacity: markOpacity, scale: markScale }}
+          className="flex flex-col items-center"
+        >
+          <Mark className="!h-[clamp(6.5rem,17vw,13rem)]" />
+          <span className="mt-6 text-[clamp(1.75rem,5.5vw,4rem)] leading-none font-bold tracking-[0.2em] text-bone uppercase [font-stretch:88%]">
             Aurex
           </span>
         </motion.div>

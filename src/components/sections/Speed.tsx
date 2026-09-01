@@ -31,7 +31,7 @@ export function Speed() {
   const timerColor = useTransform(
     p,
     [0.28, 0.36, 0.74],
-    ["#f4f1ea", "#f0b429", "#f0b429"],
+    ["#f2f5f8", "#00c4e4", "#00c4e4"],
   );
   const frozen = useTransform(p, [0.72, 0.78], [0, 1]);
   const eventsOut = useTransform(p, [0.74, 0.82], [1, 0]);

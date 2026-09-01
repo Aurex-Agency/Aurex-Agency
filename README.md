@@ -83,7 +83,23 @@ The screenshot and audit harnesses expect a server on `localhost:3100`
 Current state: 0 axe violations at 1440x900 and 390x844, no horizontal
 overflow at any tested width, production build clean.
 
+## Brand
+
+The accent is sampled from the Aurex logo's own gradient, deep blue through
+to highlight cyan, and lives in three tokens in `globals.css`:
+`--color-signal`, `--color-signal-bright`, `--color-signal-deep`. Nothing
+hardcodes the accent, so the whole site re-skins from those three values.
+
+The logo mark is already the site's central idea: a line carrying two
+glowing nodes. The Signal that threads the page is the same object.
+
+Brand files live in `public/brand/`. The favicon and app icons come from
+the file conventions in `src/app/` (`favicon.ico`, `icon.png`,
+`apple-icon.png`). The social card is a static PNG at
+`src/app/opengraph-image.png`, regenerated with `node quality/make-og.mjs`.
+
 ## Deploying
 
-Vercel. Set `LEAD_WEBHOOK_URL` in project environment variables before
-going live, otherwise leads are logged rather than delivered.
+See `DEPLOY.md`. Short version: import to Vercel, set `LEAD_WEBHOOK_URL`
+before the first deploy or leads are only logged, then add `aurexagency.com`
+as primary with `www` redirecting to it.

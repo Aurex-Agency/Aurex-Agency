@@ -32,8 +32,8 @@ export function Nav() {
     <motion.header
       initial={false}
       animate={{
-        backgroundColor: lifted || open ? "rgba(8,9,11,0.78)" : "rgba(8,9,11,0)",
-        borderColor: lifted || open ? "rgba(244,241,234,0.08)" : "rgba(244,241,234,0)",
+        backgroundColor: lifted || open ? "rgba(6,8,11,0.78)" : "rgba(6,8,11,0)",
+        borderColor: lifted || open ? "rgba(242,245,248,0.08)" : "rgba(242,245,248,0)",
       }}
       transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
       className="fixed inset-x-0 top-0 z-50 border-b backdrop-blur-md"

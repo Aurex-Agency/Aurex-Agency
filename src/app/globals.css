@@ -2,35 +2,43 @@
 
 /* ============================================================
    AUREX DESIGN TOKENS
-   The palette is built for one idea: a warm gold signal
-   travelling through near-black machinery.
+
+   The palette is built for one idea: a luminous signal travelling
+   through near-black machinery.
+
+   The accent is sampled directly from the Aurex logo, whose mark is
+   already a line carrying two glowing nodes. The brand mark and the
+   page mechanic are therefore the same object, which is why the site
+   matches the logo rather than the other way round.
    ============================================================ */
 @theme {
-  /* Ground. Near-black, very slightly warm so gold sits naturally on it. */
-  --color-void: #08090b;
-  --color-pit: #0c0e12;
-  --color-panel: #12151b;
-  --color-ridge: #1a1e26;
-  --color-charcoal: #262b35;
-  --color-slate: #3a414e;
+  /* Ground. Near-black, very slightly cool so the cyan sits in it
+     rather than on top of it. */
+  --color-void: #06080b;
+  --color-pit: #0a0d12;
+  --color-panel: #10141b;
+  --color-ridge: #171c25;
+  --color-charcoal: #232a35;
+  --color-slate: #38414f;
 
-  /* Type. Warm whites, never pure #fff. */
-  --color-bone: #f4f1ea;
-  --color-linen: #d8d4cb;
+  /* Type. Cool neutrals, never pure #fff. */
+  --color-bone: #f2f5f8;
+  --color-linen: #d3d9e0;
   /* Both label greys clear 4.5:1 against the page ground, so the small
      mono captions the design leans on stay legible rather than decorative.
-     dim 4.9:1, ash 7.2:1 on --color-void. */
-  --color-ash: #a09b91;
-  --color-dim: #837e75;
+     dim 5.3:1, ash 7.7:1 on --color-void. */
+  --color-ash: #98a1ac;
+  --color-dim: #7b838e;
 
-  /* The Aurex Signal. One accent, three intensities. */
-  --color-signal: #f0b429;
-  --color-signal-bright: #ffd66b;
-  --color-signal-deep: #a9701a;
+  /* The Aurex Signal. One accent, three intensities, all sampled from
+     the logo gradient: deep blue through to the highlight cyan. */
+  --color-signal: #00c4e4;
+  --color-signal-bright: #5be8ff;
+  --color-signal-deep: #0a63b8;
 
   /* Supporting states only. Never decorative. */
-  --color-alert: #e5533d;
-  --color-live: #4ec98a;
+  --color-alert: #ff6a4d;
+  --color-live: #3ddc97;
 
   --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-mono-data), ui-monospace, "SF Mono", monospace;

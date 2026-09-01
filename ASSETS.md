@@ -9,17 +9,29 @@ Ordered by how much difference each one makes.
 
 ---
 
-## 1. Logo and wordmark  (high impact, blocks brand fidelity)
+## 1. A reversed logo, drawn for dark backgrounds  (received the light version)
 
-**What:** SVG preferred, or PNG at 1000px+ wide on transparent background.
-Horizontal lockup and, if it exists, the mark on its own.
+**Received and installed:** the mark, the horizontal wordmark, and the ICO.
+These now drive the favicon, the app icons, the social share card, and the
+Aurex mark that the chaos resolves into in chapter twelve. The site palette
+was retuned to your logo's blue-to-cyan gradient at the same time.
 
-**Where it goes:** `src/components/ui/Wordmark.tsx`, plus the favicon and
-the social share image.
+**Still needed:** a reversed variant of the horizontal wordmark, built for
+dark backgrounds. The supplied one was drawn for white: the left half of
+AUREX is deep navy and the word AGENCY is mid grey, and both very nearly
+disappear on near-black. I tested brightness correction and it washes the
+gradient out without rescuing AGENCY.
 
-**Right now:** the wordmark is set in type with the gold Signal node beside
-it. That is a deliberate stand-in, not a guess at your logo. It reads well,
-so there is no rush, but it is not your brand.
+So the site's navigation and footer currently pair your real mark with
+AUREX set in the site's own typeface. It is legible and on brand, but it is
+a lockup I made, not one you approved. A proper reversed wordmark replaces
+it with a single image.
+
+**Also worth having:** an SVG of the mark. The PNG is 320px square, which
+is fine at every size the site uses it today, but SVG would stay crisp if
+you ever want it large.
+
+**Where it goes:** `public/brand/`, then `src/components/ui/Wordmark.tsx`.
 
 ---
 

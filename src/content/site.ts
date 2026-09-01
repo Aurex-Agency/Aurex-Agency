@@ -23,7 +23,7 @@ export const business = {
   phone: null as string | null,
   region: "North Mississippi",
   serviceArea: "North Mississippi, the Mid South, and the rest of the South",
-  url: "https://www.aurexagency.com",
+  url: "https://aurexagency.com",
   cities: [
     "Oxford", "Tupelo", "Southaven", "Olive Branch", "Hernando",
     "Batesville", "New Albany", "Corinth", "Starkville", "Memphis",
